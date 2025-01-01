@@ -1,4 +1,18 @@
+import { Proportions } from 'lucide-react'
 import { FC, useState } from 'react'
+
+function Link({ websiteName, websiteLink }: { websiteName: string, websiteLink: string }) {
+  return (
+    <a
+      href={websiteLink}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-gray-300 hover:text-blue-400 transition-colors duration-200"
+    >
+      {websiteName}
+    </a>
+  )
+}
 
 const Contact: FC = () => {
   const [formData, setFormData] = useState({
@@ -80,22 +94,9 @@ const Contact: FC = () => {
         <div className="mt-12">
           <h3 className="text-2xl font-semibold mb-4 text-center text-blue-400">Connect with me</h3>
           <div className="flex justify-center space-x-6">
-            <a
-              href="https://github.com/abubakar"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-300 hover:text-blue-400 transition-colors duration-200"
-            >
-              GitHub
-            </a>
-            <a
-              href="https://linkedin.com/in/abubakar"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-300 hover:text-blue-400 transition-colors duration-200"
-            >
-              LinkedIn
-            </a>
+            <Link websiteLink='https://github.com/abubakarutar' websiteName='Github' />
+            <Link websiteLink='https://linkedin.com/in/abubakarutar' websiteName='LinkedIn' />
+            <Link websiteLink='https://x.com/abubakarutar' websiteName='X' />
           </div>
         </div>
       </div>
