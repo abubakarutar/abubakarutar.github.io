@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  
+  <body>
+    <h2 class="sr-only">
+      Logic gate simulator — drag gates onto the canvas, click inputs to toggle,
+      and connect gates by clicking ports.
+    </h2>
+
+    <div id="app">
+      <div id="sidebar">
+        <h3>GATES</h3>
+        <div class="gate-btn" draggable="true" data-type="AND">AND</div>
+        <div class="gate-btn" draggable="true" data-type="OR">OR</div>
+        <div class="gate-btn" draggable="true" data-type="NOT">NOT</div>
+        <div class="gate-btn" draggable="true" data-type="NAND">NAND</div>
+        <div class="gate-btn" draggable="true" data-type="NOR">NOR</div>
+        <div class="gate-btn" draggable="true" data-type="XOR">XOR</div>
+        <div class="gate-btn" draggable="true" data-type="XNOR">XNOR</div>
+        <div class="gate-btn" draggable="true" data-type="INPUT">INPUT</div>
+        <div class="gate-btn" draggable="true" data-type="OUTPUT">OUTPUT</div>
+      </div>
+      <div id="canvas-wrap">
+        <canvas id="canvas"></canvas>
+        <div class="hint" id="hint">
+          Drag gates from the left panel • Click ports to connect
+        </div>
+        <div class="toolbar">
+          <button class="tool-btn danger" onclick="clearAll()">
+            Clear all
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
